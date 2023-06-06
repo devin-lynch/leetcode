@@ -22,13 +22,27 @@
 
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
-        index = []
-        for i in range(len(nums)):
-            for j in range(i + 1, len(nums)):
-                if nums[i] + nums[j] == target:
-                    index.append(i)
-                    index.append(j)
-                    return index
-        return index
+        hash = {}
+        for index, n in enumerate(nums):
+            diff = target - n
+            if diff not in hash:
+                hash[n] = index
+            else: 
+                return [hash[diff], index]
+
+print(Solution().twoSum([3,3], 6))
+
+
+
+# class Solution:
+#     def twoSum(self, nums: list[int], target: int) -> list[int]:
+#         index = []
+#         for i in range(len(nums)):
+#             for j in range(i + 1, len(nums)):
+#                 if nums[i] + nums[j] == target:
+#                     index.append(i)
+#                     index.append(j)
+#                     return index
+#         return index
     
-Solution().twoSum()
+# Solution().twoSum()
