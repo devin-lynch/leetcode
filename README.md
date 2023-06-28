@@ -13,3 +13,5 @@
 [219: Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii)
 
 [242: Valid Anagram](https://leetcode.com/problems/valid-anagram)
+
+[682: Baseball Game](https://leetcode.com/problems/baseball-game/)
