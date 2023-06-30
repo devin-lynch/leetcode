@@ -52,14 +52,14 @@ from typing import List
 class Solution:
     def calPoints(self, operations: List[str]) -> int:
         scores = []
-        for n in operations:
-            if n == '+':
-                scores.append(scores[len(scores) - 1] + scores[len(scores) - 2])
-            elif n == "D":
-                scores.append(scores[len(scores) - 1] * 2)
-            elif n == 'C':
+        for op in operations:
+            if op == '+':
+                scores.append(scores[-1] + scores[-2])
+            elif op == "D":
+                scores.append(scores[-1] * 2)
+            elif op == 'C':
                 scores.pop()
             else:
-                scores.append(int(n))
+                scores.append(int(op))
         return sum(scores)    
 print(Solution().calPoints(['5', '2', 'C', 'D', '+']))
