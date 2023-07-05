@@ -8,6 +8,8 @@
 
 [125: Valid Palindrome](https://leetcode.com/problems/valid-palindrome)
 
+[206: Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
+
 [217: Contains Duplicate](https://leetcode.com/problems/contains-duplicate)
 
 [219: Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii)
