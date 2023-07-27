@@ -13,25 +13,33 @@ from typing import List
 # Output: ""
 # Explanation: There is no common prefix among the input strings.
 
+# class Solution:
+#     def longestCommonPrefix(self, strs: List[str]) -> str:
+#       longest_prefix = strs[0]
+#       for str in strs:
+#         if longest_prefix == '':
+#           return ''
+#         else:
+#           new_longest_prefix = ''
+#           for i, c in enumerate(longest_prefix):
+#             if i < len(str):
+#               if longest_prefix[i] != str[i]: 
+#                 break
+#               else:
+#                 new_longest_prefix += str[i]
+#           longest_prefix = new_longest_prefix
+#       return longest_prefix
+          
+# print(Solution().longestCommonPrefix(['cart', 'car', 'card']))
+
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
-      longest_prefix = strs[0]
-      for str in strs:
-        if longest_prefix == '':
-          return ''
-        else:
-          new_longest_prefix = ''
-          for i, c in enumerate(longest_prefix):
-            if i < len(str):
-              if longest_prefix[i] != str[i]: 
-                break
-              else:
-                new_longest_prefix += str[i]
-          longest_prefix = new_longest_prefix
+      longest_prefix = ''
+      for i, c in enumerate(strs[0]):
+        for s in strs:
+          if len(s) == i or s[i] != c:
+             return longest_prefix
+        longest_prefix += c
       return longest_prefix
           
-         
-
-
-
-print(Solution().longestCommonPrefix(['cart', 'car', 'card']))
+print(Solution().longestCommonPrefix(['cart', 'car', 'carq']))
